@@ -1,0 +1,126 @@
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 40px 40px;
+  margin-bottom: 80px;
+  text-align: left;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.section {
+  flex: 0 0 25%;
+  min-width: 200px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 14px;
+  padding-left: 14px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 1em 0; /* Добавляем стандартные отступы параграфа */
+  transition: color 0.2s ease;
+}
+
+a.description:hover {
+  color: var(--color-carmine-red);
+  cursor: pointer;
+}
+
+.copyrightDescription {
+  max-width: 140px;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+/* ====== Адаптация под мобильные устройства ====== */
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+  .footer {
+    background: none;
+    border: none;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    max-width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .copyrightDescription {
+    max-width: 140px;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--color-gray);
+  }
+
+  /* Блок 3 -> первый в порядке, 33.3% */
+  .section:nth-child(2) {
+    order: 1;
+    flex: 0 0 33.3%;
+  }
+
+  /* Блок 4 -> второй в порядке, 33.3% */
+  .section:nth-child(3) {
+    order: 2;
+    flex: 0 0 33.3%;
+  }
+
+  /* Блок 1 -> третий в порядке, 33.3% */
+  .section:nth-child(4) {
+    order: 3;
+    flex: 0 0 33.3%;
+  }
+
+  /* Блок 2 -> четвертый в порядке, 100% (новая «строка») */
+  .section:nth-child(1) {
+    order: 4;
+    flex: 0 0 100%;
+  }
+
+  .description {
+    font-size: 14px;
+    padding-left: 14px;
+  }
+}

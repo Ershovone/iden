@@ -1,0 +1,34 @@
+{
+  "name": "identity-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.4",
+    "@svgr/webpack": "^8.1.0",
+    "@types/nodemailer": "^6.4.17",
+    "motion": "^12.0.1",
+    "next": "15.1.6",
+    "nodemailer": "^6.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "resend": "^4.1.2",
+    "swiper": "^11.2.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^22.13.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6"
+  }
+}

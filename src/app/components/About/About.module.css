@@ -1,0 +1,177 @@
+.about {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 20px 0px 20px;
+}
+
+.about::before {
+	content: '';
+	display: block;
+	height: 134px;
+	visibility: hidden;
+}
+
+.backgroundContainer {
+	position: absolute;
+	z-index: 1;
+	background-image: url(../../../../public/images/aboutBackgroundRaw.svg);
+	max-height: 756px;
+	max-width: 1168px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+	filter: blur(60px);
+}
+
+.headerContainer {
+	z-index: 2;
+	display: flex;
+	justify-content: end;
+	width: 70%;
+	margin-bottom: 102px;
+}
+
+.header {
+	display: block;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 115%;
+	text-align: right;
+	margin: unset;
+}
+
+.subheader {
+	font-size: 32px;
+	font-weight: 200;
+}
+
+.headerAccent {
+	color: var(--color-carmine-red);
+}
+
+.mainContainer {
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	gap: 90px;
+	line-height: 125%;
+}
+
+.aboutBlock {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	margin-top: 20px;
+}
+
+.aboutText {
+	display: block;
+	max-width: 307px;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.accordeonContainer {
+	position: absolute;
+	z-index: 1;
+	overflow: visible;
+	top: 100px;
+	right: 15px;
+}
+
+.aboutList {
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	margin: unset;
+	padding: unset;
+}
+
+.AboutListItem {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	max-width: 371px;
+	padding: 38px 22px;
+	border-radius: var(--border-radius-xl);
+}
+
+.itemHeader {
+	font-size: 20px;
+	font-weight: 600;
+	margin: unset;
+}
+
+.itemText {
+	font-size: 14px;
+	font-weight: 300;
+	margin: unset;
+	position: relative;
+	left: 13px;
+}
+
+@media (max-width: 768px) {
+	.backgroundContainer {
+		filter: blur(30px);
+	}
+
+	.headerContainer {
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	.header {
+		font-size: 42px;
+	}
+
+	.subheader {
+		font-size: 24px;
+	}
+
+	.mainContainer {
+		flex-direction: column;
+		gap: 35px;
+	}
+
+	.aboutBlock {
+		position: static;
+		z-index: 2;
+		align-items: center;
+		justify-content: center;
+		margin-top: unset;
+	}
+
+	.aboutText {
+		max-width: 310px;
+		font-size: 16px;
+	}
+
+	.accordeonContainer {
+		display: none;
+	}
+
+	.AboutListItem {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 18px;
+		max-width: 310px;
+		padding: 29px 18px;
+		border-radius: var(--border-radius-xl);
+	}
+
+	.itemText {
+		font-size: 16px;
+		left: 13px;
+	}
+}

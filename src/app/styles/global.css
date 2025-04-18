@@ -1,0 +1,92 @@
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: var(--font-core-sans-c), sans-serif;
+}
+
+:root {
+	--color-carmine-red: #b7004d;
+	--color-blue: #0469ff;
+	--color-light-blue: #0094ff;
+	--color-white: #ffffff;
+	--color-gray: #aaaaaa;
+	--color-background: #0f0414;
+
+	--border-radius-xl: 33px;
+	--border-radius-l: 32px;
+	--border-radius-m: 30px;
+	--border-radius-s: 28px;
+
+	--page-size-desktop: 1200px;
+	--page-size-mobile: 393px;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-white);
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+.app {
+	position: relative;
+	margin: 0 auto;
+	max-width: var(--page-size-desktop);
+}
+
+.main-text-desktop {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 125%;
+}
+
+.main-text-mobile {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 125%;
+}
+
+.bold-text-desktop {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 125%;
+}
+
+.bold-text-mobile {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 125%;
+}
+
+.title-start-desktop {
+	font-weight: 200;
+	font-size: 32px;
+	line-height: 115%;
+}
+
+.title-start-mobile {
+	font-weight: 200;
+	font-size: 24px;
+	line-height: 115%;
+}
+
+.title-end-desktop {
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 115%;
+}
+
+.title-end-mobile {
+	font-weight: 600;
+	font-size: 42px;
+	line-height: 115%;
+}
+
+.interactive-elements-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 115%;
+}

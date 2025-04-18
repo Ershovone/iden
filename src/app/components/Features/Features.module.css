@@ -1,0 +1,248 @@
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50px 20px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.featuresSection::before {
+  content: "";
+  display: block;
+  height: 140px;
+  visibility: hidden;
+}
+
+.headerContainer {
+  align-self: flex-start;
+  text-align: left;
+  margin-bottom: 65px;
+  position: relative;
+  left: 70px;
+}
+
+.title {
+  font-size: 33px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.highlight {
+  color: var(--color-carmine-red);
+  font-weight: bold;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  justify-content: space-between;
+  position: relative;
+  max-width: 87%;
+  z-index: 2;
+}
+
+.featureCard {
+  position: relative;
+  flex: 0 0 422px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 33px;
+  padding: 50px 34px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  z-index: 2;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.featureCard h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.featureCard p {
+  max-width: 353px;
+  margin: 0;
+  vertical-align: middle;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #bdbebd;
+  line-height: 1.5;
+}
+
+.accordeonSVG {
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  right: 50px;
+  top: 350px;
+}
+
+.backgroundSVG {
+  position: absolute;
+  z-index: 1;
+  background-image: url(../../../../public/images/featuresBackgroundRaw.svg);
+  max-height: 585px;
+  max-width: 875px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 400px;
+  top: 350px;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(100px);
+}
+
+.icon {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.mobileAccardionSVG {
+  display: none;
+}
+
+.mobileSVG {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .featuresGrid {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobileAccardionSVG,
+  .mobileSVG {
+    display: none;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .subtitle {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .featureCard {
+    max-width: 500px;
+    padding: 60px 30px;
+  }
+
+  .featureCard h3 {
+    font-size: 24px;
+  }
+
+  .featureCard p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuresSection {
+    overflow: hidden;
+    padding: unset;
+  }
+
+  .headerContainer {
+    align-self: center;
+    text-align: right;
+    position: static;
+    left: unset;
+  }
+
+  .accordeonSVG {
+    display: none;
+  }
+
+  .backgroundSVG {
+    right: 40px;
+    top: 150px;
+    filter: blur(70px);
+  }
+
+  .mobileAccardionSVG {
+    display: inline-block;
+    z-index: 12;
+    position: relative;
+    left: 140px;
+  }
+
+  .mobileSVG {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: -1;
+    filter: blur(90px);
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    margin-bottom: 40px;
+  }
+  .title {
+    font-size: 24px;
+    text-align: right;
+  }
+
+  .subtitle {
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .featureCard {
+    max-width: 300px;
+    padding: 48px 19px;
+    flex: 0 0 345px;
+  }
+
+  .featureCard h3 {
+    font-size: 20px;
+  }
+
+  .featureCard p {
+    font-size: 16px;
+  }
+
+  .icon {
+    top: 20px;
+  }
+}

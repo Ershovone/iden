@@ -1,0 +1,213 @@
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+}
+
+.intro::before {
+  content: "";
+  display: block;
+  height: 100px;
+  visibility: hidden;
+}
+
+.svgContainer {
+  position: absolute;
+  z-index: 0;
+  align-self: end;
+  filter: blur(50px);
+}
+
+.svgContainer svg {
+  will-change: transform, opacity;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 882px;
+  gap: 94px;
+}
+
+.logo {
+  height: 107px;
+  width: 387px;
+  z-index: 2;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-gray);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(32px);
+  padding: 46px 29px;
+  z-index: 2;
+}
+
+.infoText {
+  margin: unset;
+  max-width: 342px;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
+
+.linkContainer {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.bidLink {
+  width: 231px;
+  line-height: 53px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: var(--color-carmine-red);
+  border-radius: var(--border-radius-m);
+  z-index: 2;
+}
+
+.knowMoreLink {
+  width: 231px;
+  line-height: 53px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  backdrop-filter: blur(32px);
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-m);
+  z-index: 2;
+}
+
+.bidLink:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.knowMoreLink:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.clientsContainer {
+  width: 100vw;
+  height: 112px;
+  margin-top: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(32px);
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  overflow: hidden;
+}
+
+.clientsSwiper {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.clientsSwiper:active {
+  cursor: grabbing;
+}
+
+.clientsSwiper :global(.swiper-wrapper) {
+  transition-timing-function: linear;
+}
+
+.clientSlide {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientImg {
+  height: 34px;
+  width: 171px;
+}
+
+@media (max-width: 920px) {
+  .clientImg {
+    height: 25px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: start;
+    gap: 38px;
+  }
+
+  .intro::before {
+    content: "";
+    display: block;
+    height: 100px;
+    visibility: hidden;
+  }
+
+  .logo {
+    height: 65px;
+    width: 234px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    border-radius: unset;
+    border: unset;
+    background: unset;
+    backdrop-filter: unset;
+    padding: unset;
+  }
+
+  .infoText {
+    margin: unset;
+    max-width: 321px;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .linkContainer {
+    margin-top: 49px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bidLink {
+    width: 221px;
+    line-height: 51px;
+  }
+
+  .knowMoreLink {
+    width: 221px;
+    line-height: 51px;
+  }
+
+  .clientsContainer {
+    width: 100vw;
+    height: 75px;
+    margin-top: 77px;
+  }
+
+  .clientImg {
+    height: 22px;
+    width: 114px;
+  }
+}

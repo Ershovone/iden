@@ -1,0 +1,142 @@
+.importSubstitution {
+	display: flex;
+	max-width: 87%;
+	justify-content: end;
+	position: relative;
+}
+
+.mainContainer::before {
+	content: '';
+	display: block;
+	height: 140px;
+	visibility: hidden;
+}
+
+.svgContainer {
+	position: absolute;
+	z-index: 1;
+	background-image: url(../../../../public/images/flagRaw.svg);
+	max-height: 800px;
+	max-width: 1600px;
+	top: 70px;
+	left: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
+	width: 90vw;
+	filter: blur(110px);
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 65px;
+	max-width: 631px;
+	z-index: 2;
+}
+
+.sectionHeader {
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 80%;
+	text-align: right;
+	margin: unset;
+}
+
+.setcionSubheader {
+	font-weight: 200;
+	font-size: 33px;
+	line-height: 115%;
+}
+
+.headerAccentBlue {
+	color: var(--color-blue);
+}
+
+.headerAccentRed {
+	color: var(--color-carmine-red);
+}
+
+.sectionArticle {
+	display: flex;
+	flex-direction: column;
+	max-width: 490px;
+	border-radius: var(--border-radius-xl);
+	border: 1px solid var(--color-gray);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(32px);
+	gap: 30px;
+	padding: 30px 65px;
+}
+
+.mainText {
+	font-weight: 600;
+	font-size: 19px;
+	line-height: 125%;
+	margin: unset;
+}
+
+.list {
+	position: relative;
+	left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: unset;
+	padding: unset;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 125%;
+}
+
+@media (max-width: 1500px) {
+	.svgContainer {
+		left: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.importSubstitution {
+		max-width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mainContainer::before {
+		height: 75px;
+	}
+
+	.svgContainer {
+		max-height: 60vh;
+	}
+
+	.sectionHeader {
+		font-size: 42px;
+		margin-right: 10px;
+	}
+
+	.setcionSubheader {
+		font-size: 24px;
+	}
+
+	.sectionArticle {
+		padding: 40px 10px;
+		backdrop-filter: blur(13px);
+		margin: 0px 10px;
+	}
+
+	.mainText {
+		font-size: 20px;
+		max-width: 350px;
+	}
+
+	.mainText:nth-child(1) {
+		max-width: 299px;
+	}
+
+	.list {
+		font-size: 16px;
+		max-width: 342px;
+	}
+}

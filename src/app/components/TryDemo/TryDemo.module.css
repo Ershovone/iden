@@ -1,0 +1,270 @@
+.demoSection {
+	position: relative;
+	margin: 0 20px;
+	color: #fff;
+	text-align: center;
+}
+
+.textContainer {
+	text-align: left;
+	margin-bottom: 65px;
+}
+
+.title {
+	font-size: 33px;
+	font-weight: 200;
+	margin: 0;
+	color: #fff;
+}
+
+.subtitle {
+	font-size: 50px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.highlight {
+	color: var(--color-carmine-red);
+	font-weight: bold;
+}
+
+.mainConteiner {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 74px;
+}
+
+.mainWrapper {
+	flex: 0 0 481px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 40px 50px;
+	border-radius: 33px;
+	text-align: left;
+}
+
+.desciption {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 125%;
+	color: #fff;
+}
+
+.featuresList li {
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.featuresList {
+	list-style: disc;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.callToAction {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.callToAction a {
+	color: var(--color-blue);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.demoButton {
+	position: relative;
+	background: var(--color-carmine-red);
+	border: none;
+	color: #ffffff;
+	padding: 20px 94px;
+	border-radius: 30px;
+	font-size: 21px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.demoButton:hover {
+	background: linear-gradient(145deg, #ff1e56, #ff4d8d);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.imageContainer {
+	position: absolute;
+	right: -340px;
+	top: -20px;
+	overflow: hidden;
+}
+
+.laptopImage {
+	height: 451px;
+	width: 758px;
+}
+
+.mobileImage {
+	display: none;
+}
+
+.group {
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+}
+
+.backgroundSvg {
+	position: absolute;
+	z-index: -1;
+	background-image: url(../../../../public/images/tryDemoBackgroundRaw.svg);
+	height: 515px;
+	width: 1260px;
+	max-height: 100vh;
+	max-width: 100vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(80px);
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+	.demoSection {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.mainConteiner {
+		align-self: center;
+		max-width: 583px;
+	}
+
+	.imageContainer {
+		display: none;
+	}
+
+	.laptopImage {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.desciption {
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.demoSection {
+		padding: 20px 15px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.backgroundSvg {
+		display: none;
+	}
+
+	.textContainer {
+		margin-bottom: 10px;
+	}
+
+	.title {
+		font-weight: 200;
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	.subtitle {
+		max-width: 335px;
+		font-weight: 600;
+		font-size: 42px;
+		line-height: 95%;
+	}
+	.highlight {
+		font-size: 42px;
+		line-height: 95%;
+	}
+
+	.laptopImage {
+		display: none;
+	}
+
+	.imageContainer {
+		position: static;
+		order: -1;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.mobileImage {
+		display: block;
+		max-width: 200px;
+		height: auto;
+	}
+
+	.mainConteiner {
+		order: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.mainWrapper {
+		width: 100%;
+		max-width: 340px;
+		padding: 20px 15px;
+	}
+
+	.desciption {
+		font-weight: 600;
+		font-size: 20px;
+	}
+
+	.featuresList {
+		position: relative;
+		margin-bottom: 30px;
+	}
+
+	.featuresList li {
+		font-weight: 300;
+		font-size: 16px;
+		margin-bottom: 8px;
+	}
+
+	.callToAction {
+		font-size: 16px;
+	}
+
+	.demoButton {
+		position: absolute;
+		bottom: 100px;
+		order: 2;
+		width: 70%;
+		max-width: 320px;
+		margin: 0 auto;
+		font-size: 16px;
+		padding: 14px 20px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.group {
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+		width: 18px;
+		height: 18px;
+	}
+}

@@ -1,0 +1,353 @@
+.contactUs::before {
+  content: "";
+  display: block;
+  height: 160px;
+  visibility: hidden;
+}
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+}
+
+.formContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 33px;
+  border: 1px solid var(--color-gray);
+  color: #fff;
+  max-width: 878px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 140px;
+  backdrop-filter: blur(32px);
+  z-index: 2;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.textContainer h2 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--color-carmine-red);
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 21px 25px;
+  font-size: 15px;
+  font-weight: 300;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  background: #2d2d3d;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input.error {
+  border-color: var(--color-carmine-red);
+}
+
+.label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus + .label,
+.label.filled {
+  top: 0;
+  font-size: 12px;
+  background-color: #2d2d3d;
+  padding: 0 8px;
+  border-radius: 3px 3px 0 0;
+  margin-left: -4px;
+}
+
+.errorMessage {
+  position: absolute;
+  left: 25px;
+  bottom: -18px;
+  font-size: 12px;
+  color: var(--color-carmine-red);
+}
+
+.input:focus {
+  border-color: var(--color-carmine-red);
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.submitButton {
+  padding: 15px 30px;
+  font-size: 21px;
+  background: var(--color-carmine-red);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #ff1e56, #ff4d8d);
+}
+
+.checkboxContainer {
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 20px; /* Место для сообщения об ошибке */
+}
+
+.checkboxContainer.error .labelDesciption {
+  color: var(--color-carmine-red);
+}
+
+.consentError {
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  font-size: 12px;
+  color: var(--color-carmine-red);
+}
+
+.checkbox {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.labelDesciption {
+  color: var(--color-gray);
+}
+
+.contactUsSVG {
+  position: absolute;
+  z-index: -1;
+  background-image: url(../../../../public/images/contactUsBackgroundRaw.svg);
+  height: 918px;
+  width: 725px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  max-height: 100vh;
+  max-width: 100vw;
+  filter: blur(80px);
+}
+
+/* Добавляем стили для модального окна */
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(32px);
+  border: 1px solid var(--color-gray);
+  border-radius: 33px;
+  color: #fff;
+  padding: 40px;
+  width: 90%;
+  max-width: 400px;
+  outline: none;
+}
+
+.modalCloseButton {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  color: var(--color-gray) !important;
+}
+
+.modalCloseButton:hover {
+  color: #fff !important;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.modalText {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contactUs::before {
+    height: 40px;
+  }
+
+  .ContactUsMobileSVG {
+    display: block;
+    position: absolute;
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  .formContainer {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 373px;
+    margin-bottom: 80px;
+    overflow: visible;
+  }
+
+  .labelDesciption {
+    text-decoration: underline;
+  }
+
+  .textContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .textContainer h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .form {
+    align-items: center;
+    padding: 0;
+  }
+
+  .input {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  .inputGroup {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .input:focus + .label,
+  .label.filled {
+    font-size: 11px;
+  }
+
+  .errorMessage {
+    left: 20px;
+    bottom: -16px;
+    font-size: 11px;
+  }
+
+  .submitButton {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  .checkboxContainer {
+    font-size: 12px;
+    margin-top: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkbox {
+    transform: scale(1);
+    margin-right: 10px;
+  }
+
+  .ContactUsSVG {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContainer h2 {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .labelDesciption {
+    text-decoration: underline;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .input {
+    padding: 24px 21px;
+    font-size: 15px;
+  }
+
+  .label {
+    font-size: 15px;
+    left: 21px;
+  }
+
+  .input:focus + .label,
+  .label.filled {
+    font-size: 12px;
+  }
+
+  .submitButton {
+    cursor: pointer;
+    font-size: 13px;
+    padding: 12px 18px;
+  }
+
+  .checkboxContainer {
+    font-size: 12px;
+  }
+}
